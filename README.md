@@ -19,7 +19,7 @@ Each of the three categories, shoud have 10 quotes, for a total of 30 quotes sto
 ## Technology
 
 Javascript.  
-Commande line.  
+Command line.  
 
 
 
