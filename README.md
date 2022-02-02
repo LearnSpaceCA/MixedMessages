@@ -4,27 +4,35 @@
 1. [Goal and features](#goal-and-features)
 2. [Technology](#technology)
 3. [How to run the script](#how-to-run-the-script)
+3. [Screenshot](#screenshot)
 
 ## Goal and features
 
 Project from the Code Academy Full-stack developper'path.  
 
-When a user run the script file with node on a terminal (node script.js)
-the output should show three messsages, random quote about birth, life and death.
+Quotes generator. The generator show 3 random quotes (birth, life, death) on a web page. New quotes can be generated with a click on a button. Each of the three categories have 10 quotes, for a total of 30 quotes stored in the js script.  
 
-Quotes are taken from the website Good reads.
+Quotes are taken from the website [Goodreads](https://www.goodreads.com
+).
 
-Each of the three categories, shoud have 10 quotes, for a total of 30 quotes stored in the script.
+
 
 ## Technology
 
 Javascript.  
-Command line.  
+Html CSS.  
+Fontawesome.  
 
 
 
 ## How to run the script
 
-Download the projet on your machine, run it with node js program. Open your terminal in the downloaded folder and run:
+Open with your web browser the following file at the root of the repository:
 
-	node script.js
+	index.html
+	
+ 
+	
+## Screenshot
+
+![](img/mixed-messages-phylophyl-code-academy.png) 
