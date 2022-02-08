@@ -1,5 +1,6 @@
 html {
     width: 100%;
+    font-size:16px;
 }
 
 body {
@@ -14,9 +15,13 @@ body {
 
 h1 {
     margin: 100px 0 50px 0;
+    font-size:  calc(1em + 1vw);
 }
 
 button {
+    padding: 0.5rem 0.5rem;
+    border: 5px solid gold;
+    border-radius:5%;
     margin: 0 0 25px 0;
 }
 
@@ -31,14 +36,27 @@ main {
 
 .div-width {
     width: 80%;
-    max-width: 600px;
+    /* max-width: 600px; */
     height: auto;
 }
 
 .div-height {
-    height: 430px;
+    height: 50vhx;
 }
 
 .div-center {
     margin: 0 auto;
 }
+
+@media screen and (min-width: 25em){
+    html { font-size: calc( 16px + (24 - 16) * (100vw - 400px) / (800 - 400) ); }
+  }
+  
+  /* Safari <8 and IE <11 */
+  @media screen and (min-width: 25em){
+    html { font-size: calc( 16px + (24 - 16) * (100vw - 400px) / (800 - 400) ); }
+  }
+  @media screen and (min-width: 50em){
+  
+  html { font-size: calc( 16px + (24 - 16) * (100vw - 400px) / (800 - 400) ); }
+  }
