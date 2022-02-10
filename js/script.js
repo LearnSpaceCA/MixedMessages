@@ -1,5 +1,5 @@
 let mixedMessages = {
-    birth: [
+    Birth: [
         '“The best of all things is something entirely outside your grasp: not to be born, not to be, to be nothing. But the second best thing for you is to die soon.” Friedrich Nietzsche',
         '“The death of dogma is the birth of morality.” Immanuel Kant',
         '“The nature of finite things as such is to have the seed of passing away as their essential being: the hour of their birth is the hour of their death.” G. W. Friedrich Hegel',
@@ -11,7 +11,7 @@ let mixedMessages = {
         '“New Beginnings are often disguised as painful endings.” - Lao Tzu',
         '“All things were ready for us at our birth; it is we that have made everything difficult for ourselves, through our disdain for what is easy.” - Seneca'
         ],
-    life: [
+    Life: [
         '“No one can construct for you the bridge upon which precisely you must cross the stream of life, no one but you yourself alone.” - Friedrich Nietzsche',
         '“The busier we are, the more acutely we feel that we live, the more conscious we are of life.” - Immanuel Kant',
         '“The valor that struggles is better than the weakness that endures.” - G. W. Friedrich Hegel',
@@ -23,7 +23,7 @@ let mixedMessages = {
         '“Life is a series of natural and spontaneous changes. Don\'t resist them; that only creates sorrow. Let reality be reality.“ - Lao Tzu',
         '“Life is like a play: it\'s not the length, but the excellence of the acting that matters.” - Seneca'
     ],
-    death: [
+    Death: [
         '“To die proudly when it is no longer possible to live proudly.” - Friedrich Nietzsche',
         '“If the truth shall kill them, let them die.” - Immanuel Kant',
         '"It is solely by risking life that freedom is obtained" - G. W. Friedrich Hegel',
@@ -36,19 +36,25 @@ let mixedMessages = {
         '“Loss is not as bad as wanting more.” - Lao Tzu',
         '“It is uncertain where Death will await you; there expect it everywhere.” - Seneca'
     ],
+    OneQuote:['“sentence.” - Author'],
+    EmptyQuote:[],
     show() {
-        let birthMessage = this.birth[Math.floor(Math.random() * Object.keys(this.birth).length)];
-        let lifeMessage = this.life[Math.floor(Math.random() * Object.keys(this.life).length)];
-        let deathMessage = this.death[Math.floor(Math.random() * Object.keys(this.death).length)];
-        if (!deathMessage || !lifeMessage || !birthMessage) {
-            return 'Quote missing in a category. Please fill it.';
-        } else {
-            let messageRabndom = "<p><strong>Birth: </strong>" + birthMessage + "</p>" + "<p><strong>Life: </strong>" + lifeMessage + "</p>" + "<p><strong>Death: </strong>" + deathMessage + "</p>";
-            return messageRabndom;
-        }
-        
-    }
-}
+        let array = [];
+        for (let property in this) {
+            let value;
+            value = this[property][Math.floor(Math.random() * this[property].length)];
+            if (value !== undefined) {
+                if (this[property].length <2){
+                    array.push(`<p><strong>${property}</strong>: please enter at least two quotes in this category`);
+                } else {
+                array.push(`<p><strong>${property}</strong>: ${value}</p>`);
+                };
+            }
+            
+        };
+        return array.join(' \n ');
+    },
+};
 
 // show the quote on opening the page
 document.getElementById("quote").innerHTML = mixedMessages.show();
