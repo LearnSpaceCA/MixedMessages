@@ -10,10 +10,11 @@
 
 Project from the Code Academy Full-stack developper'path.  
 
-Quotes generator. The generator show 3 random quotes (birth, life, death) on a web page. New quotes can be generated with a click on a button. Each of the three categories have 10 quotes, for a total of 30 quotes stored in the js script.  
+Quotes generator. The generator shows 3 random quotes (birth, life, death) on a web page. New quotes can be generated with a click on a button. Each of the three categories have 10 quotes, for a total of 30 quotes stored in the js script.  
 
-Quotes are taken from the website [Goodreads](https://www.goodreads.com
-).
+If a quotes category is empty, no message will be shown. If a category contains less than two quotes, the message will be "please enter at least two quotes in this category".  
+
+Quotes are taken from the website [Goodreads](https://www.goodreads.com).  
 
 
 
